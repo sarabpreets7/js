@@ -1,0 +1,203 @@
+What is JavaScript? How does it differ from Java?
+Explain the key features of JavaScript.
+Differentiate between dynamically typed and statically typed languages.
+What are the primitive data types in JavaScript?
+What are falsy values in JavaScript?
+Describe the scope chain and how it works in JavaScript.
+Explain the concept of higher-order functions and provide an example.
+What is a callback function? Give an example of its usage.
+What are closures? How are they used?
+What is the difference between an arrow function and a regular function?
+Explain the concept of prototypal inheritance and prototype chaining.
+What are the differences between null and undefined in JavaScript?
+How does hoisting work in JavaScript?
+What are immediately invoked function expressions (IIFE) and why are they used?
+Describe the event loop and its role in JavaScript's asynchronous behavior.
+What are the differences between synchronous and asynchronous programming?
+Explain the purpose of promises and how they handle asynchronous operations.
+Describe how to handle errors in JavaScript.
+What are modules in JavaScript? How do you export and import modules?
+Explain the concepts of let, const, and var in relation to variable scoping.
+What is destructuring in JavaScript and how is it used?
+Describe the spread syntax and its various applications.
+Explain the concept of async/await and how it simplifies asynchronous programming.
+What are generators in JavaScript? How are they different from regular functions?
+What is the purpose of the this keyword in JavaScript?
+Describe the differences between == and === in JavaScript.
+How can you deep clone an object in JavaScript?
+Explain the concept of currying and provide an example.
+What are the different ways to iterate over an object in JavaScript?
+What is the purpose of the Map and Set objects in JavaScript?
+Explain the concept of memoization and how it can improve performance.
+Describe the different methods to handle asynchronous flow control in JavaScript.
+What are the differences between call, apply, and bind in JavaScript?
+Explain the concept of event delegation and its advantages.
+How can you handle cross-origin resource sharing (CORS) in JavaScript?
+What are some common security vulnerabilities in JavaScript applications?
+Describe the principles of functional programming and their application in JavaScript.
+How can you optimize JavaScript code for performance?
+Explain how to handle asynchronous errors in JavaScript.
+What are some best practices for writing clean and maintainable JavaScript code?
+
+
+
+
+
+JavaScript is a high-level, interpreted programming language primarily used for client-side web development. It differs from Java in several ways, including syntax, use cases, and programming paradigms.
+
+The key features of JavaScript are:
+
+Interactivity: JavaScript enables interactivity by allowing dynamic changes to web page content and behavior.
+Event-driven programming: JavaScript allows responding to user actions or system events.
+Object-oriented programming (OOP): JavaScript supports OOP principles like encapsulation, inheritance, and polymorphism.
+Prototypal inheritance: JavaScript uses prototypal inheritance instead of classical inheritance.
+Asynchronous programming: JavaScript supports asynchronous operations through callbacks, promises, and async/await.
+Dynamically typed languages like JavaScript determine the variable type at runtime, whereas statically typed languages like Java require variable types to be declared explicitly during compilation.
+
+The primitive data types in JavaScript are:
+
+Number
+String
+Boolean
+Null
+Undefined
+Symbol (added in ECMAScript 6, used for creating unique identifiers)
+Falsy values in JavaScript are false, 0, "" (empty string), null, undefined, and NaN (Not-a-Number).
+
+The scope chain is the order in which nested functions are defined lexically, forming a hierarchy of scopes. When a variable is accessed, JavaScript searches for it starting from the innermost scope and moves up the chain until it finds the variable or reaches the global scope.
+
+Higher-order functions are functions that can take one or more functions as arguments or return a function as a result. They enable functional programming techniques like function composition and abstraction.
+
+A callback function is a function passed as an argument to another function, which is then invoked inside the outer function. It allows for asynchronous operations and handling of events.
+
+Closures are functions that have access to variables from their outer (enclosing) lexical scope even after the outer function has finished executing. They allow for maintaining access to variables and encapsulation of data.
+
+Arrow functions are a shorthand syntax for writing functions in JavaScript. They have a more concise syntax and lexically bind the this value, which means they don't have their own this and inherit it from the surrounding scope.
+
+Prototypal inheritance is a way of creating objects in JavaScript by linking them to other objects as prototypes. When a property or method is accessed on an object, JavaScript looks up the prototype chain to find the property or method in the object's prototype.
+
+null represents the intentional absence of any object value. It is an assignment value that can be explicitly assigned to a variable. undefined indicates the absence of a value or uninitialized variable. It is the default value of uninitialized variables.
+
+Hoisting is JavaScript's default behavior of moving variable and function declarations to the top of their respective scopes during the compilation phase, while keeping the assignments in their original positions.
+
+Immediately Invoked Function Expressions (IIFE) are anonymous functions that are immediately executed after being defined. They are typically used to create a private scope and avoid polluting the global namespace.
+
+The event loop is a mechanism in JavaScript that handles asynchronous operations by continuously checking the event queue for tasks to execute. It ensures that the program remains responsive while performing tasks asynchronously.
+
+Synchronous programming refers to code execution where each operation must complete before moving to the next one. Asynchronous programming allows multiple operations to be initiated and executed concurrently, without blocking the execution flow.
+
+Promises are objects in JavaScript that represent the eventual completion (or failure) of an asynchronous operation and allow for better handling of asynchronous code. They simplify the chaining of asynchronous operations and provide error handling mechanisms.
+
+Error handling in JavaScript can be done using try-catch blocks, where code that might throw an error is enclosed in a try block, and any thrown error can be caught and handled in the corresponding catch block.
+
+Modules in JavaScript provide a way to organize and reuse code. The ES6 module syntax allows exporting and importing functionality between different modules.
+
+let, const, and var are used to declare variables in JavaScript. let and const were introduced in ECMAScript 6, while var has been available since earlier versions.
+
+let allows the declaration of block-scoped variables that can be reassigned.
+const allows the declaration of block-scoped variables that cannot be reassigned after initialization.
+var allows the declaration of variables with function scope or global scope.
+
+Destructuring in JavaScript allows extracting values from arrays or objects into distinct variables, making it easier to work with complex data structures.
+
+The spread syntax (...) in JavaScript allows spreading elements of an iterable (like an array or string) into individual elements. It can be used for array concatenation, function arguments, object cloning, and more.
+
+Async/await is a syntactical feature introduced in ES2017 that allows writing asynchronous code in a more synchronous manner. It provides a clean and readable way to work with promises.
+
+Generators in JavaScript are functions that can be paused and resumed, allowing the creation of iterators. They are denoted by the function declaration with an asterisk (function*) or using the function* expression.
+
+The this keyword in JavaScript refers to the object that owns the current executing code. Its value is determined by how a function is invoked. It can be explicitly set using call(), apply(), or bind() methods.
+
+The == operator in JavaScript performs loose equality comparison, allowing type coercion. The === operator performs strict equality comparison, requiring both value and type to be the same.
+
+To deep clone an object in JavaScript, you can use various methods such as the spread operator ({...}), Object.assign(), or the JSON.parse(JSON.stringify()) technique. The choice depends on the specific requirements and caveats associated with each method.
+
+Currying is a technique in functional programming where a function with multiple arguments is transformed into a sequence of functions, each taking a single argument. It allows partial application of arguments and facilitates code reuse.
+
+There are multiple ways to iterate over an object in JavaScript, including for...in loop, Object.keys(), Object.values(), and Object.entries() methods introduced in ECMAScript 6.
+
+The Map object in JavaScript is a built-in collection that stores key-value pairs, where keys can be of any type. The Set object is a collection of unique values, without any duplicates.
+
+Memoization is a technique used to optimize function execution by caching the results of expensive function calls and returning the cached result when the same inputs are provided again.
+
+Asynchronous flow control in JavaScript can be managed using techniques like callbacks, promises, async/await, generators, and libraries like Async.js or RxJS.
+
+call(), apply(), and bind() are methods in JavaScript used to change the context of a function execution. They allow specifying the value of this and, in the case of call() and apply(), provide arguments for the function.
+
+Event delegation is a technique where you attach a single event listener to a parent element instead of attaching multiple listeners to individual child elements. It leverages event bubbling to handle events efficiently, especially for dynamically created elements.
+
+Cross-Origin Resource Sharing (CORS) is a mechanism that allows controlled access to resources from different origins on the web. It ensures security by enforcing browser policies for cross-origin requests.
+
+Common security vulnerabilities in JavaScript applications include cross-site scripting (XSS), cross-site request forgery (CSRF), and injection attacks. Preventing these vulnerabilities requires proper input validation, output encoding, and adherence to security best practices.
+
+Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions. It emphasizes immutability, pure functions, and avoiding side effects. JavaScript provides support for functional programming concepts like higher-order functions and immutable data structures.
+
+To optimize JavaScript code for performance, you can focus on areas such as minimizing DOM operations, optimizing loops, reducing unnecessary function calls, caching values, and employing techniques like debouncing and throttling.
+
+Handling asynchronous errors in JavaScript can be achieved by using the .catch() method on promises, try-catch blocks with async/await, or handling errors passed as arguments to callback functions.
+
+Best practices for writing clean and maintainable JavaScript code include using meaningful variable and function names, following code formatting conventions, modularizing code, writing readable and concise code, and applying consistent error handling.
+
+
+
+
+
+Remember to research the specific technologies and frameworks used by the company you're interviewing with. This list covers a wide range of JavaScript concepts and should help you build a solid foundation. Good luck with your interview preparation!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Given an array of integers, write a function to find the maximum sum of any contiguous subarray.
+
+Implement a function to determine if a given string is a palindrome.
+
+Write a function that takes in a string and returns the most common character(s) in the string.
+
+Implement a function to flatten a nested array.
+
+Given a sorted array of numbers, write a function to find a specific target number using binary search.
+
+Write a function that takes in a string and returns the reversed version of the string without using the built-in reverse() method.
+
+Implement a function to check if a given number is prime.
+
+Given an array of objects, write a function to sort the objects based on a specific property value.
+
+Write a function to remove duplicates from an array.
+
+Implement a function that checks if two strings are anagrams (contain the same characters in a different order).
+
+Given a string, write a function to count the occurrence of each word in the string.
+
+Implement a function that checks if a given string is a valid email address.
+
+Write a function that generates all possible combinations of a given string.
+
+Given a binary tree, write a function to find the maximum depth (height) of the tree.
+
+Implement a function to check if a given string is a valid palindrome by ignoring non-alphanumeric characters.
+
+Write a function to calculate the factorial of a given number.
+
+Given a matrix (2D array), write a function to rotate the matrix 90 degrees clockwise.
+
+Implement a function to find the missing number in an array of consecutive numbers.
+
+Write a function that determines if a given number is a power of two.
+
+Given a string of parentheses, write a function to check if the parentheses are balanced.
+
+
