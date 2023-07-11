@@ -201,3 +201,72 @@ Write a function that determines if a given number is a power of two.
 Given a string of parentheses, write a function to check if the parentheses are balanced.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Implement a function that checks if a given string is a valid URL.
+
+Write a function that finds the longest substring without repeating characters in a given string.
+
+Given an array of integers, write a function to find the two numbers that add up to a specific target sum.
+
+Implement a function that checks if a given string is a valid palindrome considering alphanumeric characters and ignoring letter case.
+
+Write a function that converts a Roman numeral to an integer.
+
+Given a sorted array of distinct integers, write a function to find the index of the target element. If it doesn't exist, return the index where it should be inserted to maintain the sorted order.
+
+Implement a function that calculates the Nth Fibonacci number using iteration or recursion.
+
+Write a function to remove duplicates from an array in-place (without using additional data structures).
+
+Given a string containing only parentheses, implement a function to find the minimum number of parentheses to be removed to make the string valid.
+
+Implement a function that sorts an array of objects based on multiple properties.
+
+Write a function to reverse the words in a given sentence.
+
+Implement a function that checks if a given string is a valid IPv4 address.
+
+Given a binary tree, write a function to check if it is a valid binary search tree (BST).
+
+Implement a function to calculate the sum of all prime numbers up to a given number.
+
+Write a function that checks if a string is a valid credit card number using Luhn's algorithm.
+
+Implement a function to find the intersection of two arrays, i.e., the common elements between them.
+
+Write a function to find the maximum product of three numbers in an array.
+
+Given a matrix of 0s and 1s, write a function to find the largest square of 1s in the matrix.
+
+Implement a function to check if a given number is a perfect square without using built-in functions.
+
+Write a function that generates all valid permutations of a given string.
+
+These questions will challenge your problem-solving abilities and require a good understanding of JavaScript concepts and algorithms. Practice solving similar problems and optimize your solutions for efficiency. Good luck with your preparation!
+
+
