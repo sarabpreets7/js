@@ -26,8 +26,8 @@ What is the purpose of the this keyword in JavaScript?---
 Describe the differences between == and === in JavaScript.
 How can you deep clone an object in JavaScript?---
 Explain the concept of currying and provide an example.
-What are the different ways to iterate over an object in JavaScript?------
-What is the purpose of the Map and Set objects in JavaScript?------
+What are the different ways to iterate over an object in JavaScript?------          -----------
+What is the purpose of the Map and Set objects in JavaScript?------           --------------
 Explain the concept of memoization and how it can improve performance.
 Describe the different methods to handle asynchronous flow control in JavaScript.
 What are the differences between call, apply, and bind in JavaScript?
