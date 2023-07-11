@@ -270,3 +270,57 @@ Write a function that generates all valid permutations of a given string.
 These questions will challenge your problem-solving abilities and require a good understanding of JavaScript concepts and algorithms. Practice solving similar problems and optimize your solutions for efficiency. Good luck with your preparation!
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Implement a function to reverse a string without using built-in reverse() method.
+Write a function that determines if a given string is a valid palindrome, ignoring non-alphanumeric characters.
+Implement a function that returns the nth Fibonacci number.
+Write a function to check if two strings are anagrams of each other.
+Implement a function that finds the maximum sum of a contiguous subarray within an array of integers.
+Write a function that removes falsy values (false, null, 0, "", undefined, and NaN) from an array.
+Implement a function that checks if a given string is a valid email address.
+Write a function to find the intersection of two arrays.
+Implement a function that converts a number to its Roman numeral representation.
+Write a function to remove duplicates from an array, preserving the original order.
+Implement a function to flatten a nested object.
+Write a function that finds the longest substring without repeating characters in a given string.
+Implement a function that sorts an array of objects by a specified key.
+Write a function to find the missing number in an array of integers from 1 to N.
+Implement a function to convert a binary number to its decimal equivalent.
+Write a function that checks if a given string is a valid palindrome, considering alphanumeric characters and ignoring letter case.
+Implement a function to find the median of two sorted arrays.
+Write a function to count the occurrence of each character in a given string.
+Implement a function to check if a given number is a prime number.
+Write a function that determines if a given string is a valid JSON object.
+
+
