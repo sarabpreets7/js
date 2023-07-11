@@ -4,40 +4,40 @@ Differentiate between dynamically typed and statically typed languages.
 What are the primitive data types in JavaScript?
 What are falsy values in JavaScript?
 Describe the scope chain and how it works in JavaScript.
-Explain the concept of higher-order functions and provide an example.
+Explain the concept of higher-order functions and provide an example.--------
 What is a callback function? Give an example of its usage.
 What are closures? How are they used?
-What is the difference between an arrow function and a regular function?
+What is the difference between an arrow function and a regular function?---------
 Explain the concept of prototypal inheritance and prototype chaining.
 What are the differences between null and undefined in JavaScript?
-How does hoisting work in JavaScript?
-What are immediately invoked function expressions (IIFE) and why are they used?
+How does hoisting work in JavaScript?--
+What are immediately invoked function expressions (IIFE) and why are they used?-----
 Describe the event loop and its role in JavaScript's asynchronous behavior.
-What are the differences between synchronous and asynchronous programming?
+What are the differences between synchronous and asynchronous programming?------
 Explain the purpose of promises and how they handle asynchronous operations.
 Describe how to handle errors in JavaScript.
-What are modules in JavaScript? How do you export and import modules?
+What are modules in JavaScript? How do you export and import modules?------
 Explain the concepts of let, const, and var in relation to variable scoping.
-What is destructuring in JavaScript and how is it used?
-Describe the spread syntax and its various applications.
+What is destructuring in JavaScript and how is it used?-----
+Describe the spread syntax and its various applications.----
 Explain the concept of async/await and how it simplifies asynchronous programming.
-What are generators in JavaScript? How are they different from regular functions?
-What is the purpose of the this keyword in JavaScript?
+What are generators in JavaScript? How are they different from regular functions?--------------
+What is the purpose of the this keyword in JavaScript?---
 Describe the differences between == and === in JavaScript.
-How can you deep clone an object in JavaScript?
+How can you deep clone an object in JavaScript?---
 Explain the concept of currying and provide an example.
-What are the different ways to iterate over an object in JavaScript?
-What is the purpose of the Map and Set objects in JavaScript?
+What are the different ways to iterate over an object in JavaScript?------
+What is the purpose of the Map and Set objects in JavaScript?------
 Explain the concept of memoization and how it can improve performance.
 Describe the different methods to handle asynchronous flow control in JavaScript.
 What are the differences between call, apply, and bind in JavaScript?
 Explain the concept of event delegation and its advantages.
-How can you handle cross-origin resource sharing (CORS) in JavaScript?
-What are some common security vulnerabilities in JavaScript applications?
-Describe the principles of functional programming and their application in JavaScript.
-How can you optimize JavaScript code for performance?
-Explain how to handle asynchronous errors in JavaScript.
-What are some best practices for writing clean and maintainable JavaScript code?
+How can you handle cross-origin resource sharing (CORS) in JavaScript?----
+What are some common security vulnerabilities in JavaScript applications?-----
+Describe the principles of functional programming and their application in JavaScript.-----
+How can you optimize JavaScript code for performance?----
+Explain how to handle asynchronous errors in JavaScript.----
+What are some best practices for writing clean and maintainable JavaScript code?----
 
 
 
