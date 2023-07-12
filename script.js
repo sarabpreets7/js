@@ -1,6 +1,20 @@
 //reference links ------------------
 // https://javascriptbit.com/javascript-interview-questions-cleartrip/
+//https://in.linkedin.com/posts/priya-bagde_frontend-interview-experience-cars24-activity-6895783910861864960-Kfzq
 
+
+// console.log(1 + "2" + "2");  // "122"
+// console.log(1 + +"2" + "2");  // "32"
+// console.log(1 + -"1" + "2");  // "02"
+// console.log(+"1" + "1" + "2");  // "112"
+
+//https://www.interviewbit.com/javascript-interview-questions/
+
+
+//todo -- 
+//revise maps
+//searching,sorting algos
+//transpose of matrix
 
 
 // function a(){
@@ -110,8 +124,10 @@
 //     age:40
 // }
 // obj.print.call(obj1,'Chandigarh')
-
-
+// obj.print.apply(obj1,['chandigargh'])
+// let newfun = obj.print.bind(obj1);
+// newfun('punjab');
+// newfun();
 // console.log(a);
 
 
@@ -193,7 +209,7 @@
 //     console.log(b);
 // }
 // console.log(a);
-// var a = 10;
+// // var a = 10;
 // function x(){
 
 //     var a = 11;
@@ -208,12 +224,12 @@
 //     const y = function(){
 //         console.log(a);
 //     }
-//     // a  = 20;
+//     a  = 20;
   
 //     return y;
 // }
 // let z = x();
-// z()
+// z();
 // (function getage(){
     
 //     age = 21;
@@ -229,12 +245,12 @@
 // function a(){
     
 //     for(var i=0;i<4;i++){
-//         function b(){
+//         function b(i){
 //             setTimeout(()=>{
 //                 console.log(i);
 //             },300)
 //         }
-//         b();
+//         b(i);
         
 //     }
 // }
@@ -299,7 +315,7 @@
 // function abs(){
 //    var count=0;
 
-
+// ---------------------------------------------------------------------------------------------------------------------------------------------------
 //    document.querySelector("#btn").addEventListener("click",function(){
 //     count++;
 //     console.log(count);
@@ -777,3 +793,235 @@
 
 // module.publicAccess()
 // module.private();
+
+// callback hell ------------------------------------------------------
+// function importantAction(action,cb){
+
+//     setTimeout(()=>{
+//         cb(action)
+//     },2000)
+
+// }
+// function someOtherAction(action,cb){
+//     setTimeout(()=>{
+//         cb(action);
+//     },1500)
+// }
+
+// function someActionTwo(action,cb){
+//     setTimeout(()=>{
+//         cb(action);
+//     },1500)
+// }
+
+// importantAction("revise javascript",function(...args){
+//     console.log(args[0]);
+
+//     someOtherAction("revise ds algo",function(...args){
+//         console.log(args[0]);
+
+//         someActionTwo("complete training",function(...args){
+//             console.log(args[0]);
+//         })
+//     })
+// })
+
+
+// promise combinators  -------------------------------------------------
+
+// https://v8.dev/features/promise-combinators
+
+// name	description	status
+// Promise.allSettled	does not short-circuit	added in ES2020 ✅
+// Promise.all	short-circuits when an input value is rejected	added in ES2015 ✅
+// Promise.race	short-circuits when an input value is settled	added in ES2015 ✅
+// Promise.any	short-circuits when an input value is fulfilled	added in ES2021 ✅
+
+
+// function promise1(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             res("promise 1 resolved")
+//         },1500)
+//     })
+// }
+
+// function promise2(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             res("promise 2 resolved")
+//         },2000)
+//     })
+// }
+
+// function promise3(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             res("promise 3 resolved")
+//         },500)
+//     })
+// }
+
+// Promise.all([promise1(),promise2(),promise3()]).then((res)=>{
+//     console.log(res);
+// }).catch((err)=>{
+//     console.log(err);
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// console.log('start');
+
+// const promise = new Promise((res,rej)=>{
+//     console.log(1);
+//     console.log('asdsfsdsd');
+//     console.log('2323');
+//     res(2);
+
+//     console.log(434345);
+// })
+
+// promise.then((result)=>{
+//     console.log(result);
+// })
+
+// console.log('end');
+
+
+
+// const promise1 = new Promise((res,rej)=>{
+
+//     setTimeout(()=>{
+//         rej("rejected one")
+//     },100)
+// })
+
+// const promise2 = new Promise((res,rej)=>{
+
+//     setTimeout(()=>{
+//         res("rejected two")
+//     },500)
+// })
+
+// const promise3 = new Promise((res,rej)=>{
+
+//     setTimeout(()=>{
+//         rej("rejected three")
+//     },1800)
+// })
+
+// const promise4 = new Promise((res,rej)=>{
+
+//     setTimeout(()=>{
+//         res("rejected one")
+//     },1400)
+// })
+
+// Promise.any([promise1,promise2,promise3,promise4]).then((data)=>{
+//     console.log(data);
+// })
+
+// Promise.race([promise1,promise2,promise3,promise4]).then((data)=>{
+//     console.log(data);
+// })
+
+
+
+
+
+// let arr = [
+//     {id:1,
+//     name:"Sarabpreet "},
+//     {
+//         id:2,
+//         name:"random person"
+//     },
+//     {
+//         id:2,
+//         name:"sukhbir"
+//     },
+//     {
+//         id:3,
+//         name:"sukhbir"
+//     }
+// ]
+// let ans = arr.filter((item)=>{
+//     return item.id == 2;
+// })
+
+
+
+
+
+
+
+
+
+
+// console.log(2 + "-2" + "2");   //2-22
+// console.log("0" - "2" + 78);
+
+// (function(){
+//     console.log('tt');
+// })()
+// var x =2;
+
+
+// console.log(++x);
+
+
+
+// let hero = {
+//     powerLevel: 99,
+//     getPower(){
+//       return this.powerLevel;
+//     }
+//   }
+  
+//   let getPower = hero.getPower;
+  
+//   let hero2 = {powerLevel:42};
+//   console.log(getPower());
+//   console.log(hero.getPower());
+//   console.log(getPower.apply(hero2));
+
+
+
+// (function(a){
+//     return (function(){
+//       console.log(a);
+//       a = 23;
+//     //   var a;
+//     })()
+//   })(45);
+  
+
+// let newArray = new Array(700).fill('♥');
+// console.log(newArray);
+
+
+
+
+// let multiple = ((a,b)=>{
+//     console.log(a*b);
+// })
+
+// multiple(2,3)
+// let multi2 = multiple.bind(this,2);
+// multi2(2)
+
+
