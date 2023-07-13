@@ -324,3 +324,55 @@ Implement a function to check if a given number is a prime number.
 Write a function that determines if a given string is a valid JSON object.
 
 
+
+
+
+
+
+
+
+
+
+DSA______________________
+
+Reverse a String: Write a function that takes a string as input and returns the reverse of that string.
+
+Check Palindrome: Write a function to check if a given string is a palindrome (reads the same forwards and backwards).
+
+Two Sum: Given an array of numbers and a target sum, find two numbers in the array that add up to the target sum.
+
+Find Maximum Subarray: Given an array of integers, find the contiguous subarray with the largest sum.
+
+Merge Sorted Arrays: Given two sorted arrays, merge them into a single sorted array.
+
+Validate Parentheses: Given a string containing only parentheses, determine if the parentheses are valid and properly balanced.
+
+Implement a Queue using Stacks: Implement a queue data structure using two stacks.
+
+Find Missing Number: Given an array of numbers from 1 to n with one number missing, find the missing number.
+
+Implement Binary Search: Implement the binary search algorithm to search for an element in a sorted array.
+
+Reverse Linked List: Reverse a singly linked list.
+
+Find Intersection of Two Arrays: Given two arrays, find their intersection (common elements).
+
+Check if Linked List has a Cycle: Determine if a linked list has a cycle using the "fast and slow pointer" approach.
+
+Implement Depth-First Search (DFS) and Breadth-First Search (BFS): Implement the DFS and BFS algorithms for traversing a graph.
+
+Find Longest Common Prefix: Given an array of strings, find the longest common prefix among them.
+
+Implement a Stack using Queues: Implement a stack data structure using two queues.
+
+Find Nth Fibonacci Number: Find the Nth number in the Fibonacci sequence.
+
+Check if Binary Tree is a Binary Search Tree (BST): Determine if a given binary tree is a valid binary search tree.
+
+Sort an Array using Quicksort: Implement the quicksort algorithm to sort an array in ascending order.
+
+Reverse Words in a String: Given a string of words separated by spaces, reverse the order of the words.
+
+Find the Kth Largest Element in an Array: Find the Kth largest element in an unsorted array.
+
+
