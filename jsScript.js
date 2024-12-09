@@ -887,33 +887,33 @@
 
 
 
-const promise1 = new Promise((res,rej)=>{
+// const promise1 = new Promise((res,rej)=>{
 
-    setTimeout(()=>{
-        rej("rejected one")
-    },100)
-})
+//     setTimeout(()=>{
+//         rej("rejected one")
+//     },100)
+// })
 
-const promise2 = new Promise((res,rej)=>{
+// const promise2 = new Promise((res,rej)=>{
 
-    setTimeout(()=>{
-        res("rejected two")
-    },500)
-})
+//     setTimeout(()=>{
+//         res("rejected two")
+//     },500)
+// })
 
-const promise3 = new Promise((res,rej)=>{
+// const promise3 = new Promise((res,rej)=>{
 
-    setTimeout(()=>{
-        rej("rejected three")
-    },1800)
-})
+//     setTimeout(()=>{
+//         rej("rejected three")
+//     },1800)
+// })
 
-const promise4 = new Promise((res,rej)=>{
+// const promise4 = new Promise((res,rej)=>{
 
-    setTimeout(()=>{
-        res("rejected one")
-    },1400)
-})
+//     setTimeout(()=>{
+//         res("rejected one")
+//     },1400)
+// })
 
 // Promise.any([promise1,promise2,promise3,promise4]).then((data)=>{
 //     console.log(data);
@@ -921,5 +921,51 @@ const promise4 = new Promise((res,rej)=>{
 
 // Promise.race([promise1,promise2,promise3,promise4]).then((data)=>{
 //     console.log(data);
+// })
+
+
+// const a = 11;
+
+// console.log(a);
+
+// a = 11;
+
+// let a = 11;
+
+// {
+//     let a = 13
+// }
+
+
+// const promise1 = ()=>{
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             res('promise1 resolved')
+//         },1500)
+//     })
+// }
+
+// const promise2 = ()=>{
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             res('promise2 resolved')
+//         },0)
+//     })
+// }
+
+
+// const promise3 = ()=>{
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             rej('promise3 rejected')
+//         },1000)
+//     })
+// }
+
+// Promise.all([promise1(),promise2(),promise3()]).then((res)=>{
+//     console.log(res,'resutlttt');
+// })
+// .catch((err)=>{
+//     console.log(err);
 // })
 
