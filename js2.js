@@ -462,15 +462,48 @@
 //     return acc
 
 // }
+
+// Array.prototype.myReduce = function (cb,val){
+
+//     let acc = val;
+
+//     for(let i=0;i<this.length;i++){
+//         acc = acc ? cb(acc,this[i]) : this[i];
+//     }
+//     return acc
+// }
+// Array.prototype.myFilter = function(cb,i){
+//     let result = [];
+
+//     for(let i=0;i<this.length;i++){
+//         if(cb(this[i],i)){
+//             result.push(this[i]);
+//         }
+//     }
+//     return result;
+
+// }
+// Array.prototype.myMap = function(cb,idx){
+
+//     let result = [];
+
+//     for(let i=0;i<this.length;i++){
+//         result[i] = cb(this[i],idx);
+//     }
+//     return result;
+// }
+// let arr =[1,2,3,4,5,6];
+
 // let arr = [
 //     {name:"sarab",age:22},
 //     {name:"piyush",age:24},
 //     {name:"aatif",age:18},
 //     {name:"yukta",age:30},
 // ]
-// let ans = arr.myReduce(function(acc,curr){
-//     return (acc+curr)
-// },0)
+// let ans = arr.myMap(function(el){
+//     return el*2;
+// })
+
 // let array = [1,2,3,4,5]
 // let sum = array.myReduce(function(acc,curr){
 //     return acc+curr;
@@ -958,3 +991,119 @@
 
 
 
+// console.log('hi')
+
+// let arr = [1,2,3,4,5,6];
+
+// let res = arr.reduce((acc,val)=>{return(acc+val)},100);
+// console.log(res);
+// Array.prototype.myReduce = function(cb,initialVal){
+
+//     let arr = this;
+//     let result = initialVal?cb(initialVal,arr[0]):arr[0];
+
+//     for(let i=1;i<arr.length;i++){
+//         result = cb(result,arr[i]);
+//     }
+//     return result;
+// }
+// let res2 = arr.myReduce((acc,val)=>{return(acc+val)},100);
+// console.log(res2);
+
+
+// Array.prototype.myReduce = function(cb, initialVal) {
+//     let arr = this;
+//     let result;
+//     let startIndex;
+
+//     if (initialVal !== undefined) {
+//         result = initialVal; // Use the initial value if provided
+//         startIndex = 0; // Start from the first element
+//     } else {
+//         result = arr[0]; // Use the first element as the initial value
+//         startIndex = 1; // Skip the first element
+//     }
+
+//     for (let i = startIndex; i < arr.length; i++) {
+//         result = cb(result, arr[i]); // Apply the callback
+//     }
+
+//     return result; // Return the accumulated result
+// };
+
+let obj1 = {
+    a: 2,
+    b:{
+        c:3,
+        d:[4,5,6],
+        e:null
+    }
+}
+// for(let key in obj1){
+//     console.log(key);
+// }
+// a,b
+
+
+// function deepCopy(obj){
+//     if(obj == null || typeof(obj) != 'object'){
+//         return obj;
+//     }
+
+//     let copy = {};
+
+//     if(Array.isArray(obj)){
+//         return obj.map((el)=>deepCopy(el))
+//     }
+
+//     for(let key in obj){
+//         if(typeof(obj[key]) == 'object'){
+//             copy[key] = deepCopy(obj[key]);
+//         }
+//         else{
+//             copy[key] = obj[key];
+//         }
+//     }
+//     return copy;
+
+// }
+
+// let copyobj = deepCopy(obj1);
+// console.log(copyobj);
+
+
+let obj = {
+    
+    a:2,
+    abc: function(name,...args){
+        console.log('name: ',this.a,name,args);
+    }
+}
+let obj2 = {
+    a:3
+}
+let fn = obj.abc.bind(obj2);
+// fn('sarab');
+// fn('sarab');
+
+Object.prototype.myBind = function(context){
+
+    let fn = this;
+
+    return function(...args){
+        
+       return fn.call(context,...args)
+    }
+
+}
+let fn1 = obj.abc.myBind(obj2);
+fn1("sarab",'name2','name3','name4');
+fn1("sarab");
+fn1("sarab");
+// Object.prototype.myCall = function(context,...args){
+//         let fn = this;
+
+//         return fn(context,args);
+
+// }
+// obj.abc.myCall(obj2,'secondat')
