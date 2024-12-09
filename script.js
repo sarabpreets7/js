@@ -1,7 +1,12 @@
 //reference links ------------------
 // https://javascriptbit.com/javascript-interview-questions-cleartrip/
 //https://in.linkedin.com/posts/priya-bagde_frontend-interview-experience-cars24-activity-6895783910861864960-Kfzq
+https://github.com/piyush-eon/frontend-interview-questions/tree/master/reactjs-interview-questions
 
+// https://rowdycoders.com/top-50-most-asked-javascript-logical-output-interview-qa
+// https://www.youtube.com/watch?v=65slMcTFSMM   - js output ques video (imp)
+
+// https://www.naukri.com/code360/problems?cvId=0eefa3259ae742579bbe39162dffbcf2&campaign=dashboard_interviews&medium=desktop&source=naukri
 
 // console.log(1 + "2" + "2");  // "122"
 // console.log(1 + +"2" + "2");  // "32"
@@ -9,6 +14,9 @@
 // console.log(+"1" + "1" + "2");  // "112"
 
 //https://www.interviewbit.com/javascript-interview-questions/
+
+
+// frontend preparation kit ->   https://www.youtube.com/watch?v=LJESy3k8kYc
 
 
 //todo -- 
@@ -76,23 +84,26 @@
 
 // var promise = new Promise(function(resolve,reject){
 //     var x = "geeksfor"
-//     var y = "geeksfor"
+//     var y = "geekksfor"
 
 //     if(x==y){
-//         resolve();
+//         resolve('resolved');
 //     }
 //     else{
-//         reject();
+//         reject('rejected');
 //     }
 // });
 
-// promise.then(function(){
-//     console.log('Success');
-// }).catch(function(){
-//     console.log('Error');
+// promise.then(function(val){
+//     console.log('Success',val);
+// }).catch(function(er){
+//     console.log('Error',er);
 // })
 
+// let p1 = new Promise(function(res,rej){
 
+//     res('succs')
+// })
 // function add(a){
 //     return function(b){
 //         return function (){
@@ -100,6 +111,7 @@
 //         }
 //     }
 // }
+// console.log(add(4)(5));
 // function addRecur(a){
 //     return function(b){
 //         if(b) return addRecur(a+b)
@@ -1025,3 +1037,223 @@
 // multi2(2)
 
 
+
+// function curry(a){
+//     return function(b){
+//         if(b){
+//             return curry(a*b)
+//         }
+//         else{
+//             return a;
+//         }
+//     }
+// }
+
+// let ans = curry(2)(2)(2)(2)(2);
+// console.log(ans());
+
+
+// function debounce(cb,d){
+
+//     let timer;
+
+//     return function(...args){
+
+//         if(timer){
+//             clearTimeout(timer);
+//         }
+//        timer = setTimeout(()=>{
+//             cb()
+//         },d)
+//     }
+// }
+// function print(){
+//     console.log('fired');
+// }
+// let debouncedFn = debounce(print,3000)
+// document.querySelector(".btnn").addEventListener('keyup',function(){
+// // debouncedFn()
+
+// throttledFn();
+// })
+
+
+// function throttle(cb,d){
+
+//     let timer =0;
+//     console.log(1);
+//     return function(...args){
+//         let currTime = new Date().getTime();
+//         if(currTime - timer >= d){
+//             cb();
+//             timer = currTime
+//         }
+//     }
+// }
+// let throttledFn = throttle(print,2000);
+
+
+// let x = { b: 1, c: 2 };
+// let y = Object.keys(x);
+// console.log(y);
+
+
+// let arrayy = [1,2,3,4,[6,7,8,[4,3,5,6,[5,3,7,85]],5,3,4,89,59]]
+
+
+
+// function concatFn(arr){
+
+//     let result = [];
+//     for(let i=0;i<arr.length;i++){
+//         if(Array.isArray(arr[i])){
+//             result = result.concat(concatFn(arr[i]));
+//         }
+//         else{
+//             result.push(arr[i]);
+//         }
+//     }
+//     return result;
+// }
+// let ans = concatFn(arrayy);
+// console.log(ans);
+
+
+
+// let x = '{ "b": 1, "c": 2 }';
+// let y = JSON.parse(x);
+// console.log(y);
+
+
+// let x =[1,2,3]
+// let y = [2]
+// console.log((x+y));
+
+
+
+// Implement your own promise in JS-------------------------
+
+// function foo(a,b){
+//     console.log(arguments);
+// }
+// foo(1,2,3,4,5,6);
+
+
+
+
+
+
+
+// var x =100;
+
+// {
+//     var x = 10;
+//     console.log(x);
+// }
+
+
+
+
+// function compareAna(str1,str2){
+//     if(str1.length != str2.length){
+//         return false;
+//     }
+//     let obj1 = {};
+
+//     for(let i=0;i<str1.length;i++){
+//         let ch = str1.charAt(i)
+//         obj1[ch] = obj1[ch]?obj1[ch]+1:1;
+//     }
+
+//     for(let i=0;i<str2.length;i++){
+//         let ch = str1.charAt(i);
+//         if(obj1[ch]){
+//             obj1[ch] = obj1[ch] - 1;
+//             if(obj1[ch] == 0){
+//                 delete obj1[ch]
+//             }
+//         }
+//         else{
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// let str1 = 'anagramm';
+// let str2 = 'naamarg';
+// let ans = compareAna(str1,str2);
+// console.log(ans);
+
+
+// let var const
+// let a = 10;
+// // a = 11;
+
+// console.log(a);
+
+// function isDeep(obj1, obj2) {
+//     // Base case: check if both values are strictly equal
+//     if (obj1 === obj2) {
+//         // console.log(obj1,obj2);
+//       return true;
+//     }
+  
+//     // Handle cases where one is null or both are not objects
+//     if (
+//       obj1 === null ||
+//       obj2 === null ||
+//       typeof obj1 !== "object" ||
+//       typeof obj2 !== "object"
+//     ) {
+//         console.log(obj1,obj2);
+//       return false;
+//     }
+  
+//     // Get keys of both objects
+//     let obj1Keys = Object.keys(obj1);
+//     let obj2Keys = Object.keys(obj2);
+  
+//     // Check if they have the same number of keys
+//     if (obj1Keys.length !== obj2Keys.length) {
+//       return false;
+//     }
+  
+//     // Recursively check each key
+//     for (let key of obj1Keys) {
+//       if (!obj2Keys.includes(key) || !isDeep(obj1[key], obj2[key])) {
+//         return false;
+//       }
+//     }
+  
+//     return true;
+//   }
+  
+//   // Example usage
+//   const obj1 = { a: 1, b: { c: 2, d: [3, 4] } };
+//   const obj2 = { a: 1, b: { c: 2, d: [2, 4] } };
+  
+//   let ans = isDeep(obj1, obj2);
+//   console.log(ans); // Output: false
+
+
+//   let arr = []
+// for(let i=0;i<Array.length;i++){
+
+// }
+
+
+function reverseString(str){
+    let arr = str.split('');
+
+    let left = 0;
+    let right = arr.length-1;
+
+    while(left<right){
+        [arr[left],arr[right]] = [arr[right],arr[left]];
+        left++;
+        right--;
+    }
+    return arr.join('');
+}
+let ans = reverseString('sarab');
+console.log(ans);
