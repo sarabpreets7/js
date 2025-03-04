@@ -969,3 +969,752 @@
 //     console.log(err);
 // })
 
+
+
+// let name;
+
+
+// console.log(name);
+
+// name = "sarab";
+// console.log(name);
+
+
+// Array.prototype.myReduce = function(cb,initialValue){
+
+//     let arr = this;
+//     let start = 0;
+//     let val;
+//     if(initialValue){
+//         val = initialValue;
+//     }
+//     else{
+//         val = arr[0];
+//         start+=1;
+//     }
+//     for(let i=start;i<arr.length;i++){
+//         val = cb(val,arr[i],i,arr);
+//     }
+
+//     return val;
+// }
+// function add(a,b){
+//     return a+b;
+// }
+// let newArr = [1,2,3,4,5];
+// let result = newArr.myReduce(add,5);
+// console.log(result);
+
+
+// function debounce (cb,d){
+
+//     let timer;
+
+//     return function(){
+
+//         if(timer){
+//             clearTimeout(timer)
+//         }
+//         timer = setTimeout(()=>{
+//             cb()
+//         },d)
+//     }
+// }
+// function apiCall(){
+//     console.log("api call being made");
+// }
+
+// let debounceFn = debounce(apiCall,1000);
+// debounceFn();
+// debounceFn();
+// debounceFn();
+// debounceFn();
+// debounceFn();
+// debounceFn();
+// debounceFn();
+// debounceFn();
+
+
+// let debounceFn2 = debounce(apiCall,2000);
+// debounceFn2()
+
+
+
+
+
+
+//    Sort "array" so that all elements with the value of zero are moved to the
+//    end of the array, while the other elements maintain order.
+//    [0, 1, 2, 0, 3] --> [1, 2, 3, 0, 0]
+// //    Zero elements also maintain order in which they occurred.
+//    [0, "0", 1, 2, 3] --> [1, 2, 3, 0, "0"]
+// Do not use any temporary arrays or objects. Additionally, you're not able
+//    to use any Array or Object prototype methods such as .shift(), .push(), etc
+//    the correctly sorted array should be returned.
+
+// function moveZeros(arr){
+
+//     let st = 0;
+//     end = arr.length-1;
+
+//     // for(let i=0;i<arr.length;i++){
+//     //     if(arr[i] == 0 ){
+//     //         [arr[i],arr[end]] = [arr[end],arr[i]];
+//     //         end--;
+//     //     }
+//     // }
+//     // return arr;
+//     let n = arr.length;
+//     for(let i=0;i<arr.length;i++){
+//         for(let j=0;j<n-i-1;j++){
+//             if(arr[j] == 0 && arr[j+1] != 0){
+//                 [arr[j],arr[j+1]] = [arr[j+1],arr[j]]
+//             }
+//         }
+//     }
+//     return arr;
+// }
+// let result = moveZeros([0, "0", 3,2,1,'0']);
+// console.log(result);
+
+
+
+// function arrayProductExcludingCurrent(numbers) {
+//   let leftProd = [];
+//   let rightProd = [];
+//   let n = numbers.length-1;
+//   let result = [];
+
+//   for(let i=0;i<numbers.length;i++){
+    
+//     if(leftProd.length == 0){
+//         leftProd.push(numbers[i]);
+
+//     }
+//     else{
+//         leftProd.push(numbers[i]*leftProd[leftProd.length-1]);
+//     }
+
+   
+//   }
+//   for(let i=numbers.length-1;i>=0;i--){
+  
+//     if(rightProd.length == 0){
+//         rightProd.push(numbers[i]);
+
+//     }
+//     else{
+      
+//         rightProd.unshift((numbers[i]*rightProd[0]))
+//     }
+
+   
+//   }
+  
+//   for(let i=0;i<numbers.length;i++){
+
+//     result.push((i>0?leftProd[i-1]:1)*(i<numbers.length-1?rightProd[i+1]:1));
+//   }
+//   return result;
+// }
+
+
+// let ans = arrayProductExcludingCurrent([1,2,3]);
+// console.log(ans);
+
+
+
+// function mostCommonElements(numbers, k) {
+  
+//     let hash = {};
+  
+//     for(let el of numbers){
+//       hash[el] = (hash[el] || 0) +1;
+  
+//     }
+//     let heap = [];
+  
+//     for(let i=0;i<Object.keys(hash).length;i++){
+//         // console.log([Object.keys(hash)[i]]);
+//       heap.push({'key':Object.keys(hash)[i],'value':hash[Object.keys(hash)[i]]});
+//     }
+//     heap.sort((a,b)=>{
+//       return a.value - b.value;
+//     })
+   
+//     let n = heap.length - k;
+//     while(n-->0){
+//       heap.shift();
+//     }
+
+//     return heap.map((el)=>parseInt(el.key));
+//   }
+//   let ans = mostCommonElements([4,4,4,6,6,5,5,5],2);
+//   console.log(ans);
+
+
+
+
+
+// function compressString(str) {
+
+//   //   for (let i = 0; i < str.length; i++) {
+//   //     let char = str.charAt(i);
+//   //     // mapObj[char] = (mapObj[char] || 0) + 1;
+//   //   }
+//   let idx = 0;
+//   let result;
+//   while (idx < str.length) {
+//     let char = str.charAt(idx);
+
+//     let count = 1;
+//     while (idx < str.length && str.charAt(idx + 1) == char) {
+//       idx++;
+//       count++;
+//     }
+//     result += `${char}${count > 1 ? count : ""}`;
+//   }
+//   return result;
+
+
+// }
+
+
+
+// function compressString
+
+// function compressString(str) {
+
+
+//   let idx = 1;
+//   let result;
+//   let currChar = str.charAt(0);
+//  let count = 1;
+ 
+ 
+//  while(idx < str.length) {
+//      let char = str.charAt(idx);
+ 
+ 
+//         if(char == currChar){
+//         count++;
+//         idx++;
+//         }
+//         else{
+ 
+//         result += `${currChar}${count>1?count:''}`;
+//         count = 0;
+//         currChar = char;
+//            }
+//  }
+
+//  return result
+//  }
+//  let ans1 = compressString("aaaabbbcdabcd");
+//  console.log(ans1);
+ 
+
+// let obj = {
+//   a: 'hi',
+//   b: {
+//     a: null,
+//     b: ['foo', '', null, 'bar'],
+//     d: 'hello',
+//     e: {
+//       a: 'yo',
+//       b: undefined,
+//       c: 'sup',
+//       d: 0,
+//       f: [
+//         { foo: 123, bar: 123 },
+//         { foo: 465, bar: 456 },
+//       ],
+//     },
+//   },
+//   c: 'world',
+// }
+
+// let result = squashObj(obj);
+// console.log(result);
+// function squashObj(obj,parentKey){
+
+//   let result = {};
+
+//   for(let key in obj){
+//     let newKey = parentKey?(key?parentKey+"."+key:parentKey):key;
+//     if(Array.isArray(obj[key])){
+
+//       obj[key].forEach((item,index)=>{
+//         if(Array.isArray(item)){
+//         let obj = squashObj(item,newKey+"."+index);
+//           result = {...result,...obj}
+//         }
+//         else if(typeof item == 'object'){
+//           let obj = squashObj(item,newKey+"."+index);
+//           result = {...result,...obj}
+//         }
+//         else{
+//           if(item != undefined){
+//           result[newKey+"."+index] = item;
+//           }
+          
+//         }
+      
+//       })
+//     }
+//     else if(typeof obj[key] == 'object'){
+//       let squash = squashObj(obj[key],newKey);
+//       result = {...result,...squash}
+//     }
+//     else{
+//       if(obj[key] != undefined){
+//         result[newKey] = obj[key];
+//       }
+    
+//      }
+//   }
+//   return result;
+
+// }
+
+// let obj = {
+//   a: 1,
+//   b: [{ c: 2 }, [3]],
+//   c: [[{ a: 2, b: 3 }]],
+// }
+
+// function deepOmit(val, keys) {
+ 
+//   let result = {};
+ 
+//   for(let key in val){
+ 
+//   if(!keys.includes(key)){
+ 
+//       if(typeof val[key] == 'object' && !Array.isArray(val[key])){
+//         result[key] = deepOmit(val[key],keys);
+//       }
+//         else if(Array.isArray(val[key])){
+//           let newArr = [];
+
+//           for(let el of val[key]){
+//             if(typeof el == 'object' && !Array.isArray(el)){
+//               newArr.push(deepOmit(el,keys));
+//               // console.log(result[key],"kklk");
+//             }
+//             else if(Array.isArray(el)){
+//              for(let e of el){
+//               newArr.push(deepOmit(e,keys))
+//              }
+//             }
+//             else if(!keys.includes(el)){
+//               newArr.push(el)
+//             }
+//           }
+//           result[key] = newArr
+//         }
+//         else{
+//           result[key] = val[key];
+//         }
+//       }
+//   }
+//   return result;
+//  }
+//  let res = deepOmit(obj,['b', 'e']);
+//  console.log(res)
+
+
+
+// function mergeNewInterval(intervals, newInterval) {
+  
+//   let result = [];
+//   let idx = 0;
+//   let currInterval = intervals[idx];
+
+//   while(idx<intervals.length && currInterval[1]<newInterval[0]){
+//     currInterval = intervals[idx];
+//     result.push(currInterval);
+//     // console.log(currInterval,'curr')
+//     idx++;
+//   }
+//   currInterval[1] = Math.max(currInterval[1],newInterval[1]);
+//   idx++;
+//   while(idx<intervals.length){
+//     let interval = intervals[idx];
+//     if(currInterval[1]>=interval[0]){
+//       currInterval[1] = Math.max(currInterval[1],interval[1]);
+      
+//     }
+//     else{
+//       result.push(currInterval);
+//       currInterval = interval;
+//     }
+//     idx++;
+//   }
+//   if(result[result.length-1][1] < currInterval[0]){
+//     result.push(currInterval)
+//   }
+  
+//   return result;
+
+// }
+
+// //  newInterval = 
+// let intervals = [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ], [ 7, 8 ] ];
+// let res = mergeNewInterval(intervals,[2,5]);
+// console.log(res);
+
+
+
+// function countPalindromicSubstrings(str) {
+//   let count =0;
+//    for(let i=0;i<str.length;i++){
+//      count += parseInt(expandForPalindrome(str,i,i));
+//      count += parseInt(expandForPalindrome(str,i,i+1));
+//    }
+//    return count;
+// }
+
+// function expandForPalindrome(str,st,end){
+
+//   let count=0;
+//    while(st>=0 && end<str.length && str.charAt(st) == str.charAt(end)){
+//      st--;
+//      end++;
+//      count++;
+//    }
+//    st++;
+//    end--
+
+//    return count;
+
+
+//  }
+
+//  let res1 = countPalindromicSubstrings("bbb")
+//  console.log(res1);
+
+// function pairSum(numbers, target) {
+//   let obj = {};
+// let result = [];
+//   for(let i=0;i<numbers.length;i++){
+ 
+//     let diff = target - numbers[i];
+ 
+//     if(obj.hasOwnProperty(diff)){
+   
+//       result.push(obj[diff]);
+//       result.push(i);
+//       return result;
+//     }
+//     else{
+//       obj[numbers[i]] = i;
+//     }
+
+//   }
+//   return [];
+// }
+
+// let res = pairSum([0,7,1,9],7);
+// console.log(res,'res');
+
+
+
+// function decodeMessage(str) {
+  
+//   if(str.length == 0){
+//     return 1;
+//   }
+ 
+//   let count = 0;
+//   let no = parseInt(str.charAt(0));
+
+//   if(no >=1 && no<=26 && String(no).charAt(0) != '0'){
+//     let res = decodeMessage(str.substring(1));
+    
+//     count += res;
+
+//   }
+//   if(str.length >=2){
+//     let no2 = parseInt(str.substring(0,2));
+    
+//     if(no2 >=1 && no2<=26 && String(no).charAt(0) != '0') {
+//       let res= decodeMessage(str.substring(2));
+//       count += res;
+
+//   }
+//   }
+//   return count;
+  
+
+// }
+
+
+// let result = decodeMessage('1106');
+// console.log(result);
+
+
+// function isStringPalindrome(str) {
+  
+//   let strng = ""
+//   for(let i=0;i<str.length;i++){
+// let char = str.charAt(i);
+
+// if(char !=" " && ((char>='a' && char <='z') || (char >='A' && char <= 'Z' ) || (char >= '0' && char <= '9') )){
+//   strng += char;
+// }
+
+//   }
+
+// let i=0;
+// let j = strng.length-1;
+//   while(i<=j){
+//     if(strng.charAt(i) == strng.charAt(j)){
+//       i++;
+//       j--;
+//     }
+//     else{
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+
+
+// function longestConsecutiveNumberSeq(numbers) {
+//   let numSet = new Set(numbers);
+
+// let longest = 0;
+//   for(let num of numSet){
+//     if(!numSet.has(num-1)){
+//       let currNum = num
+//       let currSeq = 0;
+//       while(numSet.has(currNum)){
+//         currSeq++;
+//         currNum++;
+//       }
+//       longest = Math.max(longest,currSeq)
+//     }
+//     else{
+//       continue;
+//     }
+//   }
+//   return longest;
+// }
+
+// let ans = longestConsecutiveNumberSeq([5,1,-4]);
+// console.log(ans);
+
+
+
+// let arr =['key','val','tal']
+// console.log(typeof arr.join(','));
+
+
+// function longestIncreasingSubsequence(numbers) {
+//     let memo={};
+
+
+//     function longestSub(index,prevIdx){
+    
+//         if(index == numbers.length){
+//             return 0;
+//         }
+//         let key = `${index},${prevIdx}`;
+//         if(memo[key]){
+//             return memo[key];
+//         }
+//         // console.log(index,prevIdx,'hhh');
+//         let length = longestSub(index+1,prevIdx);
+
+//         if(prevIdx == -1 ||( numbers[index]>numbers[prevIdx] ) ){
+//             length = Math.max(length,1+ longestSub(index+1,index))
+//         }
+
+//         return memo[key]= length;
+//     }
+
+//     let res = longestSub(0,-1,0);
+//     return res;
+
+//   }
+
+//   console.log(longestIncreasingSubsequence([0,1,0,3,2,3]));
+
+
+
+
+
+// function throttle(func, wait) {
+
+//    let timer;
+
+//    return function(){
+//     let currTime = new Date().getTime();
+//     if(currTime - timer >= wait){
+//         func();
+//         timer = currTime;
+//     }
+//    }
+//   }
+
+
+//  function kthSmallestElementInABst(root, k) {
+//     let nodeVal = traverse(root,0,k);
+//     return nodeVal;
+//   }
+//   function traverse(node,count,k){
+//     if(node == null){
+//       return -1;
+//     }
+  
+//     let left = traverse(node.left,count,k);
+//     if(left != -1){
+//       return left;
+//     }
+    
+//     if(count+1 == k){
+//       return node.val;
+//     }
+  
+//    return traverse(node.right,count+1,k);
+//   }
+//   let res= kthSmallestElementInABst()
+
+
+
+// function listFormat(items, options) {
+//   let result = "";
+
+//   if(items.length == 1 || items.length == 0){
+//     if(items.length == 0){
+//         return result;
+//     }
+//     result += items[0];
+//     return result;
+//   }
+//   if(items.length == 2){
+//     result += items[0] +" and "+ items[1];
+//     return result;
+//   }
+//   items = items.filter((item)=>{
+//     return item !=""
+//   })
+//   if(options && options['unique']){
+//     items = new Set(items);
+//     items = [...items]
+//   }
+//   if(options && options['sorted']){
+//     items.sort();
+//   }
+
+//   let lengthLimit = options && options.length>0 ?options.length:items.length;
+
+//   let displayItems = items.slice(0,lengthLimit);
+//   let remainCount = items.length - displayItems.length;
+
+//   result = displayItems.slice(0,-1).join(", ") + ` and ${displayItems[displayItems.length-1]}`;
+
+//   if(remainCount >=1){
+//     result = displayItems.slice(0).join(", ") + ` and ${remainCount} other${remainCount>1?'s':''}`
+//   }
+//   return result;
+// }
+
+// let ans = listFormat(['Bob', 'Ben', 'Tim', 'Jane', 'John', 'Bob'], {
+//     length: 3,
+//     unique: true,
+//   });
+// console.log(ans);
+
+
+// function segmentWords(str, dict) {
+
+//     let wordGrid = new Set(dict);
+//     let memo = {};
+ 
+//         function backTrack(start){
+    
+//           if(start == str.length){
+//             return true;
+//           }
+//             if(memo.hasOwnProperty(start)){
+//             return memo[start]
+//             }
+//           for(let end = start+1;end<=str.length;end++){
+    
+//             let word = str.substring(start,end);
+            
+//             if(wordGrid.has(word) && backTrack(end)){
+//                 console.log(word,'lk');
+//               return memo[start] = true;
+//             }
+//           }
+//           return false;
+//         }
+//         return backTrack(0);
+//     }
+//     let result = segmentWords("greatfrontendgreat",["frontend","great"]);
+//     console.log(result);
+
+// function gridDistinctPaths(m, n) {
+  
+//     let row = new Array(n);
+//     let grid = [];
+//     for(let i=0;i<m;i++){
+//       grid.push(row);
+//     }
+  
+//     let dirs = [[1,0],[0,1]];
+//     let ans = dfs(0,0);
+//     return ans;
+  
+//   function dfs(i,j){
+  
+//   if(i>=m || j >= n){
+//     return 0;
+//   }
+//     if(i==m-1 && j == n-1){
+//       return 1;
+//     }
+//   let count = 0;
+//   for(let dir=0;dir<dirs.length;dir++){
+//     count+= dfs(i + dirs[dir][0],j+ dirs[dir][1]);
+//   }
+//   return count;
+  
+//   }
+//   }
+//   let ans = gridDistinctPaths(10,4);
+//   console.log(ans);
+
+
+
+function serializeHTML(element) {
+    return serialIze(element,0);
+   }
+   function serialIze(element,depth){
+     let indent = '\t'.repeat(depth);
+   
+     let result = "";
+     result += indent+`<${element.tag}>\n`;
+     if(element.children){
+       for(let i=0;i<element.children.length;i++){
+         let el = element.children[i];
+   
+         if(typeof el == 'string'){
+           result+= `\t${el}\n`
+         }
+         else{
+           result+= serialIze(el,depth+1);
+         }
+       }
+     }
+     result += indent+`</${element.tag}>\n`;
+   
+   return result;
+   }
+
+   let ans = serialIze({ children: ['bar1', 'bar2'], tag: 'span' });
+   console.log(ans);
