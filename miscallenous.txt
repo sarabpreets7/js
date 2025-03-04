@@ -1,0 +1,182 @@
+JavaScript & Frontend Development Questions:
+	1.	What is a JavaScript Scheduler?
+	2.	Help me write a JavaScript Scheduler implementation using promises.
+	3.	Design a synchronous task runner in JavaScript.
+	4.	How does style={{ transform: translateX(${-currentIndex * 100}%) }} work?
+	5.	Can you optimize this carousel component for large numbers of images? (React-based)
+	6.	Can you give me a good React-based carousel component that might be asked in an interview?
+	7.	Is this a good implementation of a running clock for an interview question? (You provided multiple versions)
+	8.	How can I hide my sensitive credentials (API keys, passwords) in the script? (Using dotenv)
+
+Data Structures & Algorithm Questions:
+	9.	How to solve the “Square of a Sorted Array” problem in JavaScript?
+	10.	Explain the Task Scheduler implementation.
+	11.	How can I implement a proper queue-based task scheduler in JavaScript?
+
+Job & Interview Related Questions:
+	12.	How many years of experience do you have in frontend development? Describe your most challenging project and the technologies you used.
+	13.	Can you scan LinkedIn or other sites to find emails of HRs currently hiring for a Senior Frontend Developer with 2-4 years of experience?
+	14.	Can you give me a list of all the questions I’ve asked you in the last 4 days? 
+
+
+
+
+
+
+    ### **Advanced JavaScript Concepts**
+
+---
+
+### **1. Asynchronous JavaScript**
+- **Event Loop & Call Stack**: Understanding how JavaScript handles execution and background tasks.
+- **Microtasks & Macrotasks**: `Promise` jobs (Microtasks) vs. `setTimeout`, `setInterval` (Macrotasks).
+- **Promises & Async/Await**: Handling asynchronous operations efficiently.
+- **Generators & Iterators**: Using `function*` to pause and resume execution (`yield`).
+- **Web Workers**: Running JavaScript in the background to avoid UI blocking.
+- **Concurrency & Parallelism**: Managing multiple tasks in an efficient way.
+
+---
+
+### **2. Functional Programming Concepts**
+- **Higher-Order Functions**: Functions that return or take functions as arguments (`map`, `filter`, `reduce`).
+- **Pure Functions & Immutability**: Writing side-effect-free functions.
+- **Closures & Lexical Scope**: Functions retaining access to their outer scope.
+- **Partial Application & Currying**: Breaking functions into multiple calls (`fn(a)(b)(c)`).
+- **Function Composition**: Combining multiple functions to build complex logic.
+
+---
+
+### **3. Object-Oriented Programming (OOP)**
+- **Prototype Chain & Prototypal Inheritance**: Understanding `Object.create()`, `__proto__`, and `prototype`.
+- **Class-Based Inheritance**: Using `class` and `extends` for OOP in modern JavaScript.
+- **Encapsulation & Private Methods**: Using `#privateFields` in ES6.
+- **Method Chaining**: Returning `this` to allow fluent API (`obj.method1().method2()`).
+
+---
+
+### **4. Performance Optimization**
+- **Debouncing & Throttling**: Controlling function execution frequency.
+- **Memory Leaks & Garbage Collection**: Preventing excessive memory usage.
+- **Lazy Loading & Code Splitting**: Optimizing performance in large applications.
+- **Tree Shaking & Dead Code Elimination**: Reducing bundle size by removing unused code.
+- **Efficient DOM Manipulation**: Using `DocumentFragment`, avoiding frequent reflows.
+
+---
+
+### **5. JavaScript Design Patterns**
+- **Singleton Pattern**: Ensuring a class has only one instance.
+- **Factory Pattern**: Creating objects dynamically without specifying exact class.
+- **Observer Pattern**: Implementing event-driven architectures.
+- **Decorator Pattern**: Extending functionalities without modifying existing code.
+- **Module Pattern**: Using IIFEs and ES6 Modules (`import/export`) to encapsulate logic.
+
+---
+
+### **6. Advanced Data Structures & Algorithms in JS**
+- **Linked Lists, Trees, Graphs, and Heaps**: Implementing complex data structures.
+- **Memoization & Dynamic Programming**: Caching function results to optimize performance.
+- **Trie & Suffix Trees**: Optimized search algorithms.
+- **Bit Manipulation**: Efficient computations using bitwise operators.
+
+---
+
+### **7. Metaprogramming**
+- **Reflection & Proxy Objects**: Using `Proxy` and `Reflect` APIs to modify object behavior.
+- **Symbols & Well-Known Symbols**: Creating unique object keys (`Symbol.iterator`, `Symbol.toStringTag`).
+- **Custom Iterators & Generators**: Controlling data flow efficiently.
+
+---
+
+### **8. Web APIs & Advanced Browser Features**
+- **IndexedDB & Local Storage**: Handling offline data persistence.
+- **Fetch API & WebSockets**: Efficiently communicating with servers.
+- **Service Workers & PWA Concepts**: Building offline-ready web applications.
+- **WebRTC & WebGL**: Real-time communication and 3D rendering.
+
+---
+
+### **9. Security & Best Practices**
+- **CORS (Cross-Origin Resource Sharing)**: Understanding Same-Origin Policy and how to handle it.
+- **XSS & CSRF Protection**: Preventing common security vulnerabilities.
+- **Secure Authentication (OAuth, JWT)**: Implementing secure user authentication.
+
+---
+
+### **10. Testing & Automation**
+- **Unit Testing & Integration Testing**: Using Jest, Mocha, or Jasmine.
+- **End-to-End Testing**: Automating UI tests using Cypress, Playwright, or Puppeteer.
+- **CI/CD Pipelines for JavaScript Projects**: Automating builds and deployment.
+
+---
+
+### **11. Advanced TypeScript Concepts (If Working with TS)**
+- **Generics & Conditional Types**: Writing reusable and flexible functions.
+- **Mapped & Recursive Types**: Creating advanced type transformations.
+- **Type Guards & Utility Types**: Making TypeScript safer and more efficient.
+
+---
+
+### **12. JavaScript Engines & Internal Mechanics**
+- **How V8, SpiderMonkey, and JavaScriptCore Work**: Understanding execution pipelines.
+- **JIT Compilation & Performance Optimizations**: How JavaScript engines optimize code execution.
+- **Memory Management & Heap Allocation**: Avoiding memory leaks.
+
+---
+
+These advanced concepts are commonly encountered in **high-performance applications**, **scalable architectures**, and **interview questions for senior roles**.
+
+
+
+
+// 🚀 Most Important & Frequently Asked React Machine Coding Questions
+
+// 🔥 1. Image Carousel (Slider)
+// - Auto-slide with interval.
+// - Next, Prev buttons, Shuffle feature.
+// - Keyboard navigation, Dots navigation.
+
+// 🔥 2. Todo List with Filters & Local Storage
+// - Add, Edit, Delete Todos.
+// - Mark as Completed, Filter Todos.
+// - Persist Data using `localStorage`.
+
+// 🔥 3. Infinite Scroll (Lazy Loading)
+// - Fetch large API data and load on scroll.
+// - Show loading indicator while fetching.
+
+// 🔥 4. Autocomplete Search (Debounced API Calls)
+// - Fetch suggestions on user input.
+// - Debounce API calls, optimize network requests.
+
+// 🔥 5. Multi-Step Form with Validation
+// - Step-wise form with required fields.
+// - Persist form data across page refresh.
+
+// 🔥 6. Drag & Drop Kanban Board (Trello Clone)
+// - Drag-and-drop tasks between lists.
+// - Save task status, reordering within column.
+
+// 🔥 7. E-commerce Product List with Sorting & Filtering
+// - Sorting (Low-to-High, High-to-Low Price).
+// - Filtering by Category, Price Range.
+// - Add to Cart with total price count.
+
+// 🔥 8. Timer App (Countdown, Stopwatch, Pomodoro)
+// - Countdown Timer, Stopwatch, Pomodoro mode.
+// - Start, stop, reset functionality.
+
+// 🔥 9. Real-Time Chat App (WebSocket)
+// - Live messaging using WebSockets.
+// - Show online users count.
+
+// 🔥 10. Polling Dashboard (Auto-Refresh API Data)
+// - Fetch real-time stock/weather updates.
+// - Auto-fetch every 5 seconds, stop on tab inactive.
+
+// 💡 Final Tips:
+// ✅ Clean, modular, reusable components.
+// ✅ Handle API errors, empty data, fast user actions.
+// ✅ Optimize performance: memoization, lazy loading, debouncing.
+// ✅ Ensure accessibility: Keyboard navigation, ARIA attributes.
+
+// Let me know if you need implementations for any!
